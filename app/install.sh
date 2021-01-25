@@ -18,9 +18,10 @@ fi
 
 NAME="$1"
 FOLDER="${2-"/usr/bin"}"
+COMP_FOLER="${3-"/etc/bash_completion.d"}"
 
 ln -s "$APP_DIR/cli" "$FOLDER/$NAME"
-cat > "/etc/bash_completion.d/$NAME" <<EOC
+cat > "$COMP_FOLER/$NAME" <<EOC
 source "$APP_DIR/complete"
 complete -F _bash_cli $NAME
 EOC

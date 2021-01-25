@@ -18,6 +18,7 @@ fi
 
 NAME="$1"
 FOLDER="${2-"/usr/bin"}"
+COMP_FOLER="${3-"/etc/bash_completion.d"}"
 
 if [[ ! -f "$FOLDER/$NAME" ]]; then
     >&2 echo -e "\033[31mCommand \033[36m$1\033[31m did not exist in \033[36m$2\033[39m"
@@ -34,3 +35,5 @@ if [[ "$LN_PATH" != "$APP_DIR/cli" ]]; then
 fi
 
 rm "$FOLDER/$NAME"
+
+rm "$COMP_FOLER/$NAME"

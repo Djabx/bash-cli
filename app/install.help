@@ -1,8 +1,12 @@
-NAME    - The name you would like to use for your commands
-          Example: my-app
-FOLDER  - (Optional) The directory you would like the command line installed to
-          Default: /usr/bin
-          Example: /usr/sbin
+NAME                - The name you would like to use for your commands
+                      Example: my-app
+FOLDER              - (Optional) The directory you would like the command line installed to
+                      Default: /usr/bin
+                      Example: /usr/sbin
+COMPLETION_FOLDER   - (Optional) The directory you would like the command line completion script to
+                      Default: /etc/bash_completion.d
+                      Example: ~/.bash_completion.d
+
 
 Installs your command line app under the given name by creating a symlink
 to the Bash CLI proxy.
